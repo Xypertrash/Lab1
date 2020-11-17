@@ -2,7 +2,7 @@ package bsu.rfe.java.group6.lab1.yakusik.varB12;
 
 public class Cheese extends Food{
 	public Cheese() {
-        super("Сыр");
+        super("Cheese");
     }
     public void Consume() {
         System.out.println(this + " eaten");
