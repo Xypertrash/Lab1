@@ -8,7 +8,7 @@ public class Beef extends Food{
 		this.preparedness = preparedness;
 	}
 	public void Consume() {
-		System.out.print(this + "eaten");
+		System.out.print(this + " eaten \n");
 	}
 	public double calculateCalories() {
 		if(this.preparedness.equals("Good"))

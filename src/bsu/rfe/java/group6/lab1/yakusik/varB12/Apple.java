@@ -7,7 +7,7 @@ public class Apple extends Food{
 		this.size = size;
 	}
 	public void Consume() {
-		System.out.println(this + "eaten.");
+		System.out.println(this + "eaten");
 	}
 	
 	public double calculateCalories() {

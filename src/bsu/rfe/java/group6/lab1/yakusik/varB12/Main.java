@@ -33,6 +33,29 @@ public class Main {
                     isSort = true; }
                 else itemsSoFar++;
         }
+        System.out.println("Всего в завтраке");
+        int[] amount = new int[6];
+        for (Food s : breakfast) {
+	        if (s.getName().equals("Cheese")) {
+	        amount[0]++;
+        } if (s.getName().equals("Apple")) {
+	        Apple a = (Apple) s;
+	        if (a.getSize().equals("Big")) {
+	        amount[1]++;
+	        } amount[2]++;
+        } if (s.getName().equals("Beef")) {
+        Beef a = (Beef) s;
+	        if (a.getPreparedness().equals("With blood")) amount[3]++;
+	        else if (a.getPreparedness().equals("Medium")) amount[4]++;
+	        else amount[5]++;
+        }
+	        if (amount[0] != 0) System.out.println("Всего сыра: " + amount[0]);
+	        if (amount[1] != 0) System.out.println("Всего больших яблок: " + amount[1]);
+	        if (amount[2] != 0) System.out.println("Всего маленьких яблок: " + amount[2]);
+	        if (amount[3] != 0) System.out.println("Всего мяса с кровью: " + amount[3]);
+	        if (amount[4] != 0) System.out.println("Всего мяса нормальной прожарки: " + amount[4]);
+	        if (amount[5] != 0) System.out.println("Всего прожаренного мяса: " + amount[5]);
+        
         if(isSort){
             Arrays.sort(breakfast, new Comparator() {
                 public int compare(Object f1, Object f2) {
@@ -43,6 +66,8 @@ public class Main {
                 }
             });
         }
+        
+        
         for (Food item: breakfast) {
             if (item != null) {
                 item.Consume();
@@ -57,8 +82,12 @@ public class Main {
                 } else break;
             System.out.println("Калорийность завтрака составляет " + sumOfCalories + " калорий.");
         }
+        
+     
+        
         System.out.println("Употреблено в количестве:");
         System.out.println("Яблоко: " + count[0] + "\nСыр: " + count[1] + "\nBeef: " + count[2]);
         System.out.println("Всего хорошего!");
     }
+}
 }

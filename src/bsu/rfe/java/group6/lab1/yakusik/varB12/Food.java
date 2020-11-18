@@ -6,9 +6,9 @@ public abstract class Food implements Consumable, Nutritious {
         this.name = name;
     }
     public boolean equals(Object arg0) {
-        if (!(arg0 instanceof Food)) return false; // Шаг 1
-        if (name==null || ((Food)arg0).name==null) return false; // Шаг 2
-        return name.equals(((Food)arg0).name); // Шаг 3
+        if (!(arg0 instanceof Food)) return false; 
+        if (name==null || ((Food)arg0).name==null) return false;
+        return name.equals(((Food)arg0).name); 
     }
     public String toString() {
         return name;
@@ -19,6 +19,5 @@ public abstract class Food implements Consumable, Nutritious {
     public void setName(String name) {
         this.name = name;
     }
-// Реализация метода consume() удалена из базового класса Food
-// Это можно сделать, потому что сам Food - абстрактный
+
 }
